@@ -20,4 +20,5 @@ jobs:
         uses: Ashutosh00710/github-readme-activity-graph@v1.4.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo: jovemgbr/jovemgbr
           OUTPUT_BRANCH: output
