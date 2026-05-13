@@ -8,8 +8,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: Ashutosh00710/github-readme-activity-graph@main
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Generate Activity Graph
+        uses: Ashutosh00710/github-readme-activity-graph@v1.4.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
