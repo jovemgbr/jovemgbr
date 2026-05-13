@@ -13,10 +13,11 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Generate Activity Graph
         uses: Ashutosh00710/github-readme-activity-graph@v1.4.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          OUTPUT_BRANCH: output
