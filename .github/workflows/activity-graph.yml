@@ -1,0 +1,15 @@
+name: Generate Activity Graph
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Ashutosh00710/github-readme-activity-graph@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
